@@ -38,7 +38,7 @@ def task_1():
         .groupBy("COMMUNITY AREA NAME") \
         .agg(action)
 
-    output = "output/less_2/task1"
+    output = "output/less_2/task_1"
     Filer.FileManager.save(dataset_part1, output)
 
 
@@ -66,7 +66,7 @@ def task_2():
         .distinct() \
         .limit(10)
 
-    output = "output/less_2/task2"
+    output = "output/less_2/task_2"
     Filer.FileManager.save(dataset_video_part1, output)
 
     spark.stop()
@@ -119,7 +119,7 @@ def task_3():
         .distinct() \
         .selectExpr("p_time as publish_time", "title")
 
-    output = "output/less_2/task3"
+    output = "output/less_2/task_3"
     Filer.FileManager.save(dataset_video_part2, output)
 
     spark.stop()
